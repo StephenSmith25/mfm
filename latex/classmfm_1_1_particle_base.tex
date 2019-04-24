@@ -1,0 +1,97 @@
+\hypertarget{classmfm_1_1_particle_base}{}\section{mfm\+:\+:Particle\+Base$<$ Tdim $>$ Class Template Reference}
+\label{classmfm_1_1_particle_base}\index{mfm\+::\+Particle\+Base$<$ Tdim $>$@{mfm\+::\+Particle\+Base$<$ Tdim $>$}}
+
+
+Base class that stores the information about particle\+Bases.  
+
+
+
+
+{\ttfamily \#include $<$particle\+\_\+base.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmfm_1_1_particle_base_afbf037646f60380710274aeddce74480}\label{classmfm_1_1_particle_base_afbf037646f60380710274aeddce74480}} 
+using \hyperlink{classmfm_1_1_particle_base_afbf037646f60380710274aeddce74480}{Vector\+Dim} = Eigen\+::\+Matrix$<$ double, Tdim, 1 $>$
+\begin{DoxyCompactList}\small\item\em Define a vector of size dimension. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmfm_1_1_particle_base_a7e54d8eed2348cf828c643bdd4fe64fe}{Particle\+Base} (\hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{Index} \hyperlink{classmfm_1_1_particle_base_af0e7293eaedd690be27619c9add4066c}{id}, const \hyperlink{classmfm_1_1_particle_base_afbf037646f60380710274aeddce74480}{Vector\+Dim} \&coord)
+\item 
+\mbox{\Hypertarget{classmfm_1_1_particle_base_ac833dd416abf6158b45b54355f8c60f9}\label{classmfm_1_1_particle_base_ac833dd416abf6158b45b54355f8c60f9}} 
+virtual \hyperlink{classmfm_1_1_particle_base_ac833dd416abf6158b45b54355f8c60f9}{$\sim$\+Particle\+Base} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_particle_base_af0e7293eaedd690be27619c9add4066c}\label{classmfm_1_1_particle_base_af0e7293eaedd690be27619c9add4066c}} 
+\hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{Index} \hyperlink{classmfm_1_1_particle_base_af0e7293eaedd690be27619c9add4066c}{id} () const
+\begin{DoxyCompactList}\small\item\em Return id of the particle\+Base. \end{DoxyCompactList}\item 
+void \hyperlink{classmfm_1_1_particle_base_a8ba22c9e8a5f67995013241843a3c0f4}{assign\+\_\+coordinates} (const \hyperlink{classmfm_1_1_particle_base_afbf037646f60380710274aeddce74480}{Vector\+Dim} \&coord)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmfm_1_1_particle_base_a8615262fcefb458f6c54e961f7758dc7}\label{classmfm_1_1_particle_base_a8615262fcefb458f6c54e961f7758dc7}} 
+\hyperlink{classmfm_1_1_particle_base_afbf037646f60380710274aeddce74480}{Vector\+Dim} \hyperlink{classmfm_1_1_particle_base_a8615262fcefb458f6c54e961f7758dc7}{coordinates\+\_\+}
+\begin{DoxyCompactList}\small\item\em coordinates \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_particle_base_ac8d0e6602af1a9381e478d035c4f6a13}\label{classmfm_1_1_particle_base_ac8d0e6602af1a9381e478d035c4f6a13}} 
+\hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{Index} \hyperlink{classmfm_1_1_particle_base_ac8d0e6602af1a9381e478d035c4f6a13}{id\+\_\+}
+\begin{DoxyCompactList}\small\item\em particle\+Base iD \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_particle_base_ae6f5538c34fcb799a00440b443001f6d}\label{classmfm_1_1_particle_base_ae6f5538c34fcb799a00440b443001f6d}} 
+int \hyperlink{classmfm_1_1_particle_base_ae6f5538c34fcb799a00440b443001f6d}{cell\+\_\+id}
+\begin{DoxyCompactList}\small\item\em Cell id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_particle_base_ae9827d1ff93998e4f0d64936ccb8d1d8}\label{classmfm_1_1_particle_base_ae9827d1ff93998e4f0d64936ccb8d1d8}} 
+Eigen\+::\+Matrix$<$ double, Tdim, 1 $>$ \hyperlink{classmfm_1_1_particle_base_ae9827d1ff93998e4f0d64936ccb8d1d8}{xi\+\_\+}
+\begin{DoxyCompactList}\small\item\em Reference coordinates (in a cell) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$unsigned Tdim$>$\newline
+class mfm\+::\+Particle\+Base$<$ Tdim $>$}
+
+Base class that stores the information about particle\+Bases. 
+
+\hyperlink{classmfm_1_1_particle_base}{Particle\+Base} class
+
+\hyperlink{classmfm_1_1_particle_base}{Particle\+Base} class\+: id\+\_\+ and coordinates. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Tdim} & Dimension \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmfm_1_1_particle_base_a7e54d8eed2348cf828c643bdd4fe64fe}\label{classmfm_1_1_particle_base_a7e54d8eed2348cf828c643bdd4fe64fe}} 
+\index{mfm\+::\+Particle\+Base@{mfm\+::\+Particle\+Base}!Particle\+Base@{Particle\+Base}}
+\index{Particle\+Base@{Particle\+Base}!mfm\+::\+Particle\+Base@{mfm\+::\+Particle\+Base}}
+\subsubsection{\texorpdfstring{Particle\+Base()}{ParticleBase()}}
+{\footnotesize\ttfamily template$<$unsigned Tdim$>$ \\
+\hyperlink{classmfm_1_1_particle_base}{mfm\+::\+Particle\+Base}$<$ Tdim $>$\+::\hyperlink{classmfm_1_1_particle_base}{Particle\+Base} (\begin{DoxyParamCaption}\item[{\hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{Index}}]{id,  }\item[{const \hyperlink{classmfm_1_1_particle_base_afbf037646f60380710274aeddce74480}{Vector\+Dim} \&}]{coord }\end{DoxyParamCaption})}
+
+Constructor with id and coordinates 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em id} & \hyperlink{classmfm_1_1_particle}{Particle} id \\
+\hline
+\mbox{\tt in}  & {\em coord} & coordinates of the particle \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmfm_1_1_particle_base_a8ba22c9e8a5f67995013241843a3c0f4}\label{classmfm_1_1_particle_base_a8ba22c9e8a5f67995013241843a3c0f4}} 
+\index{mfm\+::\+Particle\+Base@{mfm\+::\+Particle\+Base}!assign\+\_\+coordinates@{assign\+\_\+coordinates}}
+\index{assign\+\_\+coordinates@{assign\+\_\+coordinates}!mfm\+::\+Particle\+Base@{mfm\+::\+Particle\+Base}}
+\subsubsection{\texorpdfstring{assign\+\_\+coordinates()}{assign\_coordinates()}}
+{\footnotesize\ttfamily template$<$unsigned Tdim$>$ \\
+void \hyperlink{classmfm_1_1_particle_base}{mfm\+::\+Particle\+Base}$<$ Tdim $>$\+::assign\+\_\+coordinates (\begin{DoxyParamCaption}\item[{const \hyperlink{classmfm_1_1_particle_base_afbf037646f60380710274aeddce74480}{Vector\+Dim} \&}]{coord }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Assign coordinates 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em coord} & Assign coord as coordinates of the particle\+Base \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/particle\+\_\+base.\+h\end{DoxyCompactItemize}

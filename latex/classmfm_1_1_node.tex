@@ -1,0 +1,59 @@
+\hypertarget{classmfm_1_1_node}{}\section{mfm\+:\+:Node$<$ Tdim $>$ Class Template Reference}
+\label{classmfm_1_1_node}\index{mfm\+::\+Node$<$ Tdim $>$@{mfm\+::\+Node$<$ Tdim $>$}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmfm_1_1_node_a528ae22876ff7f38409424f9db181727}\label{classmfm_1_1_node_a528ae22876ff7f38409424f9db181727}} 
+using \hyperlink{classmfm_1_1_node_a528ae22876ff7f38409424f9db181727}{Vector\+Dim} = Eigen\+::\+Matrix$<$ double, Tdim, 1 $>$
+\begin{DoxyCompactList}\small\item\em Define a vector of size dimension. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmfm_1_1_node_ac5897f6e82a9d032cb22b14d5ac00ab9}{Node} (\hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{mfm\+::\+Index} id, const \hyperlink{classmfm_1_1_node_a528ae22876ff7f38409424f9db181727}{Vector\+Dim} \&coords)
+\item 
+\mbox{\Hypertarget{classmfm_1_1_node_acdfae40a74b72f3016b2f4f6fa9bfa56}\label{classmfm_1_1_node_acdfae40a74b72f3016b2f4f6fa9bfa56}} 
+\hyperlink{classmfm_1_1_node_acdfae40a74b72f3016b2f4f6fa9bfa56}{$\sim$\+Node} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_node_a5f37911f78ba13de4e3895b0acb6ac68}\label{classmfm_1_1_node_a5f37911f78ba13de4e3895b0acb6ac68}} 
+\hyperlink{classmfm_1_1_node_a5f37911f78ba13de4e3895b0acb6ac68}{Node} (const \hyperlink{classmfm_1_1_node}{Node}$<$ Tdim $>$ \&)=delete
+\begin{DoxyCompactList}\small\item\em Delete copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_node_a61863270265a582ad503cadf99e515ee}\label{classmfm_1_1_node_a61863270265a582ad503cadf99e515ee}} 
+\hyperlink{classmfm_1_1_node}{Node} \& \hyperlink{classmfm_1_1_node_a61863270265a582ad503cadf99e515ee}{operator=} (const \hyperlink{classmfm_1_1_node}{Node}$<$ Tdim $>$ \&)=delete
+\begin{DoxyCompactList}\small\item\em Delete assignement operator. \end{DoxyCompactList}\item 
+void \hyperlink{classmfm_1_1_node_a7744a3637ff17d5443ce965a73a571c2}{assign\+\_\+coordinates} (const \hyperlink{classmfm_1_1_node_a528ae22876ff7f38409424f9db181727}{Vector\+Dim} \&coord)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmfm_1_1_node_ac5897f6e82a9d032cb22b14d5ac00ab9}\label{classmfm_1_1_node_ac5897f6e82a9d032cb22b14d5ac00ab9}} 
+\index{mfm\+::\+Node@{mfm\+::\+Node}!Node@{Node}}
+\index{Node@{Node}!mfm\+::\+Node@{mfm\+::\+Node}}
+\subsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily template$<$unsigned Tdim$>$ \\
+\hyperlink{classmfm_1_1_node}{mfm\+::\+Node}$<$ Tdim $>$\+::\hyperlink{classmfm_1_1_node}{Node} (\begin{DoxyParamCaption}\item[{\hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{mfm\+::\+Index}}]{id,  }\item[{const \hyperlink{classmfm_1_1_node_a528ae22876ff7f38409424f9db181727}{Vector\+Dim} \&}]{coords }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmfm_1_1_node_a7744a3637ff17d5443ce965a73a571c2}\label{classmfm_1_1_node_a7744a3637ff17d5443ce965a73a571c2}} 
+\index{mfm\+::\+Node@{mfm\+::\+Node}!assign\+\_\+coordinates@{assign\+\_\+coordinates}}
+\index{assign\+\_\+coordinates@{assign\+\_\+coordinates}!mfm\+::\+Node@{mfm\+::\+Node}}
+\subsubsection{\texorpdfstring{assign\+\_\+coordinates()}{assign\_coordinates()}}
+{\footnotesize\ttfamily template$<$unsigned Tdim$>$ \\
+void \hyperlink{classmfm_1_1_node}{mfm\+::\+Node}$<$ Tdim $>$\+::assign\+\_\+coordinates (\begin{DoxyParamCaption}\item[{const \hyperlink{classmfm_1_1_node_a528ae22876ff7f38409424f9db181727}{Vector\+Dim} \&}]{coord }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Assign coordaintes 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em coord} & Assign coord as coordinates of the nodebase \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/node.\+h\end{DoxyCompactItemize}

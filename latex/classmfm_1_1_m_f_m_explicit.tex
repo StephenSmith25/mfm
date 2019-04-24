@@ -1,0 +1,74 @@
+\hypertarget{classmfm_1_1_m_f_m_explicit}{}\section{mfm\+:\+:M\+F\+M\+Explicit$<$ Tdim $>$ Class Template Reference}
+\label{classmfm_1_1_m_f_m_explicit}\index{mfm\+::\+M\+F\+M\+Explicit$<$ Tdim $>$@{mfm\+::\+M\+F\+M\+Explicit$<$ Tdim $>$}}
+
+
+A class that implements the fully explicit mfm.  
+
+
+
+
+{\ttfamily \#include $<$mfm\+\_\+explicit.\+h$>$}
+
+Inheritance diagram for mfm\+:\+:M\+F\+M\+Explicit$<$ Tdim $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmfm_1_1_m_f_m_explicit}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmfm_1_1_m_f_m_explicit_a3b1473505cf73cd6c3589439d9216025}{M\+F\+M\+Explicit} (std\+::unique\+\_\+ptr$<$ \hyperlink{classmfm_1_1_i_o}{IO} $>$ \&\&io)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_explicit_a9621f2e63e9d3dd3e8f31c2fbe9e5b35}\label{classmfm_1_1_m_f_m_explicit_a9621f2e63e9d3dd3e8f31c2fbe9e5b35}} 
+bool \hyperlink{classmfm_1_1_m_f_m_explicit_a9621f2e63e9d3dd3e8f31c2fbe9e5b35}{initialise\+\_\+mesh} () override
+\begin{DoxyCompactList}\small\item\em Initialise mesh. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_explicit_a2067a261bf027b9c0a34cb94b0d55527}\label{classmfm_1_1_m_f_m_explicit_a2067a261bf027b9c0a34cb94b0d55527}} 
+bool \hyperlink{classmfm_1_1_m_f_m_explicit_a2067a261bf027b9c0a34cb94b0d55527}{initialise\+\_\+nodes} () override
+\begin{DoxyCompactList}\small\item\em Intialise nodes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_explicit_a72d51d04855c10a843a654140f7f8c98}\label{classmfm_1_1_m_f_m_explicit_a72d51d04855c10a843a654140f7f8c98}} 
+bool \hyperlink{classmfm_1_1_m_f_m_explicit_a72d51d04855c10a843a654140f7f8c98}{initialise\+\_\+particles} () override
+\begin{DoxyCompactList}\small\item\em Initialise particles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_explicit_a6d91f7c7dc52218f1a8aed74946c4391}\label{classmfm_1_1_m_f_m_explicit_a6d91f7c7dc52218f1a8aed74946c4391}} 
+bool \hyperlink{classmfm_1_1_m_f_m_explicit_a6d91f7c7dc52218f1a8aed74946c4391}{solve} () override
+\begin{DoxyCompactList}\small\item\em Solve. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_explicit_a8ffcb7f9541221c76a9ab163bb7d574e}\label{classmfm_1_1_m_f_m_explicit_a8ffcb7f9541221c76a9ab163bb7d574e}} 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classmfm_1_1_domain}{mfm\+::\+Domain}$<$ Tdim $>$ $>$ \hyperlink{classmfm_1_1_m_f_m_explicit_a8ffcb7f9541221c76a9ab163bb7d574e}{domain\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classmfm_1_1_domain}{Domain} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$unsigned Tdim$>$\newline
+class mfm\+::\+M\+F\+M\+Explicit$<$ Tdim $>$}
+
+A class that implements the fully explicit mfm. 
+
+\hyperlink{classmfm_1_1_m_f_m_explicit}{M\+F\+M\+Explicit} class
+
+A single-\/phase explicit M\+PM 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Tdim} & Dimension \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_explicit_a3b1473505cf73cd6c3589439d9216025}\label{classmfm_1_1_m_f_m_explicit_a3b1473505cf73cd6c3589439d9216025}} 
+\index{mfm\+::\+M\+F\+M\+Explicit@{mfm\+::\+M\+F\+M\+Explicit}!M\+F\+M\+Explicit@{M\+F\+M\+Explicit}}
+\index{M\+F\+M\+Explicit@{M\+F\+M\+Explicit}!mfm\+::\+M\+F\+M\+Explicit@{mfm\+::\+M\+F\+M\+Explicit}}
+\subsubsection{\texorpdfstring{M\+F\+M\+Explicit()}{MFMExplicit()}}
+{\footnotesize\ttfamily template$<$unsigned Tdim$>$ \\
+\hyperlink{classmfm_1_1_m_f_m_explicit}{mfm\+::\+M\+F\+M\+Explicit}$<$ Tdim $>$\+::\hyperlink{classmfm_1_1_m_f_m_explicit}{M\+F\+M\+Explicit} (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classmfm_1_1_i_o}{IO} $>$ \&\&}]{io }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Constructor. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mfm\+\_\+explicit.\+h\end{DoxyCompactItemize}

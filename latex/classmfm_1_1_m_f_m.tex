@@ -1,0 +1,59 @@
+\hypertarget{classmfm_1_1_m_f_m}{}\section{mfm\+:\+:M\+FM Class Reference}
+\label{classmfm_1_1_m_f_m}\index{mfm\+::\+M\+FM@{mfm\+::\+M\+FM}}
+
+
+{\ttfamily \#include $<$mfm.\+h$>$}
+
+Inheritance diagram for mfm\+:\+:M\+FM\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmfm_1_1_m_f_m}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_acd16d85bab80502144c6743078a3ea33}\label{classmfm_1_1_m_f_m_acd16d85bab80502144c6743078a3ea33}} 
+{\bfseries M\+FM} (std\+::unique\+\_\+ptr$<$ \hyperlink{classmfm_1_1_i_o}{IO} $>$ \&\&io)
+\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_a907d70cf1b581a589e1e6559cff52113}\label{classmfm_1_1_m_f_m_a907d70cf1b581a589e1e6559cff52113}} 
+virtual bool {\bfseries initialise\+\_\+mesh} ()=0
+\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_aa5dcf9d73bcff53177a988911e30ec7d}\label{classmfm_1_1_m_f_m_aa5dcf9d73bcff53177a988911e30ec7d}} 
+virtual bool {\bfseries initialise\+\_\+particles} ()=0
+\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_a26cb73bacc6dad74e87ef4ab0fef1c14}\label{classmfm_1_1_m_f_m_a26cb73bacc6dad74e87ef4ab0fef1c14}} 
+virtual bool \hyperlink{classmfm_1_1_m_f_m_a26cb73bacc6dad74e87ef4ab0fef1c14}{initialise\+\_\+nodes} ()=0
+\begin{DoxyCompactList}\small\item\em Intialise nodes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_a0c824e2ab07dcdc96301a96df65090cd}\label{classmfm_1_1_m_f_m_a0c824e2ab07dcdc96301a96df65090cd}} 
+virtual bool {\bfseries solve} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_ae4a3f4844f4d9affcc9b814fbd89be96}\label{classmfm_1_1_m_f_m_ae4a3f4844f4d9affcc9b814fbd89be96}} 
+std\+::string {\bfseries uuid\+\_\+}
+\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_a48087e7734feaeb0a8cf763a57a4f97b}\label{classmfm_1_1_m_f_m_a48087e7734feaeb0a8cf763a57a4f97b}} 
+double \hyperlink{classmfm_1_1_m_f_m_a48087e7734feaeb0a8cf763a57a4f97b}{dt\+\_\+} \{std\+::numeric\+\_\+limits$<$double$>$\+::max()\}
+\begin{DoxyCompactList}\small\item\em Time step size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_a99a022cfd0a14d18a2b7e2449f35a8e1}\label{classmfm_1_1_m_f_m_a99a022cfd0a14d18a2b7e2449f35a8e1}} 
+bool \hyperlink{classmfm_1_1_m_f_m_a99a022cfd0a14d18a2b7e2449f35a8e1}{axi\+\_\+} \{false\}
+\begin{DoxyCompactList}\small\item\em A\+X\+I\+S\+Y\+M\+M\+E\+T\+R\+IC. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_a6b438e05bf767bda02514754c2ec6336}\label{classmfm_1_1_m_f_m_a6b438e05bf767bda02514754c2ec6336}} 
+\hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{mfm\+::\+Index} \hyperlink{classmfm_1_1_m_f_m_a6b438e05bf767bda02514754c2ec6336}{step\+\_\+} \{0\}
+\begin{DoxyCompactList}\small\item\em Current step. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_a5c9d196210bf508441ae90fbaf617954}\label{classmfm_1_1_m_f_m_a5c9d196210bf508441ae90fbaf617954}} 
+\hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{mfm\+::\+Index} \hyperlink{classmfm_1_1_m_f_m_a5c9d196210bf508441ae90fbaf617954}{nsteps\+\_\+} \{std\+::numeric\+\_\+limits$<$\hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{mfm\+::\+Index}$>$\+::max()\}
+\begin{DoxyCompactList}\small\item\em Number of steps. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_m_f_m_a797d222412df1eb7fcb68a1527d40574}\label{classmfm_1_1_m_f_m_a797d222412df1eb7fcb68a1527d40574}} 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classmfm_1_1_i_o}{mfm\+::\+IO} $>$ \hyperlink{classmfm_1_1_m_f_m_a797d222412df1eb7fcb68a1527d40574}{io\+\_\+}
+\begin{DoxyCompactList}\small\item\em A unique ptr to \hyperlink{classmfm_1_1_i_o}{IO} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classmfm_1_1_m_f_m}{M\+FM} class  \hyperlink{classmfm_1_1_m_f_m}{M\+FM} class calls solver and algorithm  mfm class\+: implicit and explicit mfm 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mfm.\+h\end{DoxyCompactItemize}

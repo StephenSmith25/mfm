@@ -1,0 +1,188 @@
+\hypertarget{classmfm_1_1_domain}{}\section{mfm\+:\+:Domain$<$ Tdim $>$ Class Template Reference}
+\label{classmfm_1_1_domain}\index{mfm\+::\+Domain$<$ Tdim $>$@{mfm\+::\+Domain$<$ Tdim $>$}}
+
+
+Class that stores information about the domain.  
+
+
+
+
+{\ttfamily \#include $<$domain.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmfm_1_1_domain_a80581ccb1f293da341c2edbe528c26fc}\label{classmfm_1_1_domain_a80581ccb1f293da341c2edbe528c26fc}} 
+using \hyperlink{classmfm_1_1_domain_a80581ccb1f293da341c2edbe528c26fc}{Vector\+Dim} = Eigen\+::\+Matrix$<$ double, Tdim, 1 $>$
+\begin{DoxyCompactList}\small\item\em Define a vector of size dimension. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmfm_1_1_domain_a84ffcd3a69703e5b6432a95dfcebbbd8}{Domain} (unsigned \hyperlink{classmfm_1_1_domain_a39557a2418dd51a972a2c09ed266ea15}{id})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_domain_a9c4cc16b90112f5d7baca60e11487b90}\label{classmfm_1_1_domain_a9c4cc16b90112f5d7baca60e11487b90}} 
+\hyperlink{classmfm_1_1_domain_a9c4cc16b90112f5d7baca60e11487b90}{$\sim$\+Domain} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_domain_a84438b3ce4b84cfe67b9f5a0690dac90}\label{classmfm_1_1_domain_a84438b3ce4b84cfe67b9f5a0690dac90}} 
+\hyperlink{classmfm_1_1_domain_a84438b3ce4b84cfe67b9f5a0690dac90}{Domain} (const \hyperlink{classmfm_1_1_domain}{Domain}$<$ Tdim $>$ \&)=delete
+\begin{DoxyCompactList}\small\item\em Delete copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_domain_ac62e769317bb03385c6d4404f08173fc}\label{classmfm_1_1_domain_ac62e769317bb03385c6d4404f08173fc}} 
+\hyperlink{classmfm_1_1_domain}{Domain} \& \hyperlink{classmfm_1_1_domain_ac62e769317bb03385c6d4404f08173fc}{operator=} (const \hyperlink{classmfm_1_1_domain}{Domain}$<$ Tdim $>$ \&)=delete
+\begin{DoxyCompactList}\small\item\em Delete assignement operator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmfm_1_1_domain_a39557a2418dd51a972a2c09ed266ea15}\label{classmfm_1_1_domain_a39557a2418dd51a972a2c09ed266ea15}} 
+unsigned \hyperlink{classmfm_1_1_domain_a39557a2418dd51a972a2c09ed266ea15}{id} () const
+\begin{DoxyCompactList}\small\item\em Return id of domain. \end{DoxyCompactList}\item 
+bool \hyperlink{classmfm_1_1_domain_a2098bfbd63556a6cd93fb852d704c1c4}{create\+\_\+nodes} (\hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{mfm\+::\+Index} gnid, const std\+::vector$<$ \hyperlink{classmfm_1_1_domain_a80581ccb1f293da341c2edbe528c26fc}{Vector\+Dim} $>$ \&coordinates, bool check\+\_\+duplicates=true)
+\begin{DoxyCompactList}\small\item\em Create nodes from coordinates. \end{DoxyCompactList}\item 
+bool \hyperlink{classmfm_1_1_domain_a0391235c4c353c37c550018e800d6c75}{add\+\_\+node} (const std\+::shared\+\_\+ptr$<$ \hyperlink{classmfm_1_1_node}{mfm\+::\+Node}$<$ Tdim $>$$>$ \&node, bool check\+\_\+duplicates=true)
+\begin{DoxyCompactList}\small\item\em Add a node to the domain. \end{DoxyCompactList}\item 
+bool \hyperlink{classmfm_1_1_domain_ab0d54b4f3be6ab4ea43af70d9beb3370}{remove\+\_\+node} (const std\+::shared\+\_\+ptr$<$ \hyperlink{classmfm_1_1_node}{mfm\+::\+Node}$<$ Tdim $>$$>$ \&node)
+\item 
+\mbox{\Hypertarget{classmfm_1_1_domain_a895efdb39e864f421af7e34f1e44d1b1}\label{classmfm_1_1_domain_a895efdb39e864f421af7e34f1e44d1b1}} 
+\hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{mfm\+::\+Index} \hyperlink{classmfm_1_1_domain_a895efdb39e864f421af7e34f1e44d1b1}{nnodes} () const
+\begin{DoxyCompactList}\small\item\em Number of nodes in the mesh. \end{DoxyCompactList}\item 
+bool \hyperlink{classmfm_1_1_domain_ae322699deacd071c5f4c789bf588cad7}{assign\+\_\+velocity\+\_\+constraints} (const std\+::vector$<$ std\+::tuple$<$ \hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{mfm\+::\+Index}, unsigned, double $>$$>$ \&velocity\+\_\+constraints)
+\item 
+void \hyperlink{classmfm_1_1_domain_af2edb71f67da7b927e9c2948ee5d3736}{generate\+\_\+material\+\_\+points} (unsigned nquadratures=1)
+\item 
+\mbox{\Hypertarget{classmfm_1_1_domain_a2d0d731e83960bc649020b68c2be2994}\label{classmfm_1_1_domain_a2d0d731e83960bc649020b68c2be2994}} 
+void \hyperlink{classmfm_1_1_domain_a2d0d731e83960bc649020b68c2be2994}{read\+\_\+input\+\_\+file} ()
+\begin{DoxyCompactList}\small\item\em Read mesh file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$unsigned Tdim$>$\newline
+class mfm\+::\+Domain$<$ Tdim $>$}
+
+Class that stores information about the domain. 
+
+\hyperlink{classmfm_1_1_domain}{Domain} class
+
+domain class which stores the particles, nodes, cells. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Tdim} & Dimension \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmfm_1_1_domain_a84ffcd3a69703e5b6432a95dfcebbbd8}\label{classmfm_1_1_domain_a84ffcd3a69703e5b6432a95dfcebbbd8}} 
+\index{mfm\+::\+Domain@{mfm\+::\+Domain}!Domain@{Domain}}
+\index{Domain@{Domain}!mfm\+::\+Domain@{mfm\+::\+Domain}}
+\subsubsection{\texorpdfstring{Domain()}{Domain()}}
+{\footnotesize\ttfamily template$<$unsigned Tdim$>$ \\
+\hyperlink{classmfm_1_1_domain}{mfm\+::\+Domain}$<$ Tdim $>$\+::\hyperlink{classmfm_1_1_domain}{Domain} (\begin{DoxyParamCaption}\item[{unsigned}]{id }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em id} & Global mesh id \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmfm_1_1_domain_a0391235c4c353c37c550018e800d6c75}\label{classmfm_1_1_domain_a0391235c4c353c37c550018e800d6c75}} 
+\index{mfm\+::\+Domain@{mfm\+::\+Domain}!add\+\_\+node@{add\+\_\+node}}
+\index{add\+\_\+node@{add\+\_\+node}!mfm\+::\+Domain@{mfm\+::\+Domain}}
+\subsubsection{\texorpdfstring{add\+\_\+node()}{add\_node()}}
+{\footnotesize\ttfamily template$<$unsigned Tdim$>$ \\
+bool \hyperlink{classmfm_1_1_domain}{mfm\+::\+Domain}$<$ Tdim $>$\+::add\+\_\+node (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \hyperlink{classmfm_1_1_node}{mfm\+::\+Node}$<$ Tdim $>$$>$ \&}]{node,  }\item[{bool}]{check\+\_\+duplicates = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Add a node to the domain. 
+
+Add a node to the domain 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & A shared pointer to node \\
+\hline
+\mbox{\tt in}  & {\em check\+\_\+duplicates} & Parameter to check duplicates \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em insertion\+\_\+status} & Return the successful addition of a node \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classmfm_1_1_domain_ae322699deacd071c5f4c789bf588cad7}\label{classmfm_1_1_domain_ae322699deacd071c5f4c789bf588cad7}} 
+\index{mfm\+::\+Domain@{mfm\+::\+Domain}!assign\+\_\+velocity\+\_\+constraints@{assign\+\_\+velocity\+\_\+constraints}}
+\index{assign\+\_\+velocity\+\_\+constraints@{assign\+\_\+velocity\+\_\+constraints}!mfm\+::\+Domain@{mfm\+::\+Domain}}
+\subsubsection{\texorpdfstring{assign\+\_\+velocity\+\_\+constraints()}{assign\_velocity\_constraints()}}
+{\footnotesize\ttfamily template$<$unsigned Tdim$>$ \\
+bool \hyperlink{classmfm_1_1_domain}{mfm\+::\+Domain}$<$ Tdim $>$\+::assign\+\_\+velocity\+\_\+constraints (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::tuple$<$ \hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{mfm\+::\+Index}, unsigned, double $>$$>$ \&}]{velocity\+\_\+constraints }\end{DoxyParamCaption})}
+
+Assign velocity constraints to nodes 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em velocity\+\_\+constraints} & Constraint at node, dir, and velocity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmfm_1_1_domain_a2098bfbd63556a6cd93fb852d704c1c4}\label{classmfm_1_1_domain_a2098bfbd63556a6cd93fb852d704c1c4}} 
+\index{mfm\+::\+Domain@{mfm\+::\+Domain}!create\+\_\+nodes@{create\+\_\+nodes}}
+\index{create\+\_\+nodes@{create\+\_\+nodes}!mfm\+::\+Domain@{mfm\+::\+Domain}}
+\subsubsection{\texorpdfstring{create\+\_\+nodes()}{create\_nodes()}}
+{\footnotesize\ttfamily template$<$unsigned Tdim$>$ \\
+bool \hyperlink{classmfm_1_1_domain}{mfm\+::\+Domain}$<$ Tdim $>$\+::create\+\_\+nodes (\begin{DoxyParamCaption}\item[{\hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{mfm\+::\+Index}}]{gnid,  }\item[{const std\+::vector$<$ \hyperlink{classmfm_1_1_domain_a80581ccb1f293da341c2edbe528c26fc}{Vector\+Dim} $>$ \&}]{coordinates,  }\item[{bool}]{check\+\_\+duplicates = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Create nodes from coordinates. 
+
+Create nodes from coordinates 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em gnid} & Global node id \\
+\hline
+\mbox{\tt in}  & {\em node\+\_\+type} & \hyperlink{classmfm_1_1_node}{Node} type \\
+\hline
+\mbox{\tt in}  & {\em coordinates} & Nodal coordinates \\
+\hline
+\mbox{\tt in}  & {\em check\+\_\+duplicates} & Parameter to check duplicates \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em status} & Create node status \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classmfm_1_1_domain_af2edb71f67da7b927e9c2948ee5d3736}\label{classmfm_1_1_domain_af2edb71f67da7b927e9c2948ee5d3736}} 
+\index{mfm\+::\+Domain@{mfm\+::\+Domain}!generate\+\_\+material\+\_\+points@{generate\+\_\+material\+\_\+points}}
+\index{generate\+\_\+material\+\_\+points@{generate\+\_\+material\+\_\+points}!mfm\+::\+Domain@{mfm\+::\+Domain}}
+\subsubsection{\texorpdfstring{generate\+\_\+material\+\_\+points()}{generate\_material\_points()}}
+{\footnotesize\ttfamily template$<$unsigned Tdim$>$ \\
+void \hyperlink{classmfm_1_1_domain}{mfm\+::\+Domain}$<$ Tdim $>$\+::generate\+\_\+material\+\_\+points (\begin{DoxyParamCaption}\item[{unsigned}]{nquadratures = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Generate points 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em nquadratures} & Number of points per direction in cell \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em point} & \hyperlink{classmfm_1_1_material}{Material} point coordinates \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classmfm_1_1_domain_ab0d54b4f3be6ab4ea43af70d9beb3370}\label{classmfm_1_1_domain_ab0d54b4f3be6ab4ea43af70d9beb3370}} 
+\index{mfm\+::\+Domain@{mfm\+::\+Domain}!remove\+\_\+node@{remove\+\_\+node}}
+\index{remove\+\_\+node@{remove\+\_\+node}!mfm\+::\+Domain@{mfm\+::\+Domain}}
+\subsubsection{\texorpdfstring{remove\+\_\+node()}{remove\_node()}}
+{\footnotesize\ttfamily template$<$unsigned Tdim$>$ \\
+bool \hyperlink{classmfm_1_1_domain}{mfm\+::\+Domain}$<$ Tdim $>$\+::remove\+\_\+node (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \hyperlink{classmfm_1_1_node}{mfm\+::\+Node}$<$ Tdim $>$$>$ \&}]{node }\end{DoxyParamCaption})}
+
+Remove a node from the domain 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & A shared pointer to node \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em insertion\+\_\+status} & Return the successful addition of a node \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/domain.\+h\end{DoxyCompactItemize}

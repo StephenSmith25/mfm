@@ -1,0 +1,25 @@
+{
+	"title": "Example JSON Input for 2D mfm",
+
+	"blocksets": [
+		{
+		"id": 1,
+		"eType": tri,
+		"material_id": 0,	
+		}
+
+	],
+
+	"nodesets":[
+		{
+		"id": 2,
+		"dof_x":,
+		
+		},
+		{
+
+		
+
+
+		},
+	]	

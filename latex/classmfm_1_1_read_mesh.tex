@@ -1,0 +1,99 @@
+\hypertarget{classmfm_1_1_read_mesh}{}\section{mfm\+:\+:Read\+Mesh$<$ Tdim $>$ Class Template Reference}
+\label{classmfm_1_1_read_mesh}\index{mfm\+::\+Read\+Mesh$<$ Tdim $>$@{mfm\+::\+Read\+Mesh$<$ Tdim $>$}}
+
+
+Class that returns mesh and particles locataions based on G\+Mesh ascii file.  
+
+
+
+
+{\ttfamily \#include $<$read\+\_\+mesh.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmfm_1_1_read_mesh_a0dcd4f554ae2784be3fa53e547b2f6a9}\label{classmfm_1_1_read_mesh_a0dcd4f554ae2784be3fa53e547b2f6a9}} 
+using \hyperlink{classmfm_1_1_read_mesh_a0dcd4f554ae2784be3fa53e547b2f6a9}{Vector\+Dim} = Eigen\+::\+Matrix$<$ double, Tdim, 1 $>$
+\begin{DoxyCompactList}\small\item\em Define a vector of size dimension. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmfm_1_1_read_mesh_aca466723f1ea120fc76ec8cee2e62a98}\label{classmfm_1_1_read_mesh_aca466723f1ea120fc76ec8cee2e62a98}} 
+\hyperlink{classmfm_1_1_read_mesh_aca466723f1ea120fc76ec8cee2e62a98}{Read\+Mesh} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classmfm_1_1_read_mesh_a205f0231970ab4511eb07ba7ecfcff47}{Read\+Mesh} (std\+::string filename)
+\item 
+std\+::vector$<$ std\+::vector$<$ \hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{mfm\+::\+Index} $>$ $>$ \hyperlink{classmfm_1_1_read_mesh_a7fe80e6e5bec7a835ffa03ef5ad92056}{read\+\_\+mesh\+\_\+cells} (const std\+::string \&mesh)
+\item 
+std\+::vector$<$ \hyperlink{classmfm_1_1_read_mesh_a0dcd4f554ae2784be3fa53e547b2f6a9}{Vector\+Dim} $>$ \hyperlink{classmfm_1_1_read_mesh_aad9a82f738f2f49010a5ca7c218855ce}{read\+\_\+nodes} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$unsigned Tdim$>$\newline
+class mfm\+::\+Read\+Mesh$<$ Tdim $>$}
+
+Class that returns mesh and particles locataions based on G\+Mesh ascii file. 
+
+\hyperlink{classmfm_1_1_read_mesh}{Read\+Mesh} class 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Tdim} & Dimension \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmfm_1_1_read_mesh_a205f0231970ab4511eb07ba7ecfcff47}\label{classmfm_1_1_read_mesh_a205f0231970ab4511eb07ba7ecfcff47}} 
+\index{mfm\+::\+Read\+Mesh@{mfm\+::\+Read\+Mesh}!Read\+Mesh@{Read\+Mesh}}
+\index{Read\+Mesh@{Read\+Mesh}!mfm\+::\+Read\+Mesh@{mfm\+::\+Read\+Mesh}}
+\subsubsection{\texorpdfstring{Read\+Mesh()}{ReadMesh()}}
+{\footnotesize\ttfamily template$<$unsigned Tdim$>$ \\
+\hyperlink{classmfm_1_1_read_mesh}{mfm\+::\+Read\+Mesh}$<$ Tdim $>$\+::\hyperlink{classmfm_1_1_read_mesh}{Read\+Mesh} (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor with filename 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em filename} & with name of file \\
+\hline
+\end{DoxyParams}
+filename\+\_\+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmfm_1_1_read_mesh_a7fe80e6e5bec7a835ffa03ef5ad92056}\label{classmfm_1_1_read_mesh_a7fe80e6e5bec7a835ffa03ef5ad92056}} 
+\index{mfm\+::\+Read\+Mesh@{mfm\+::\+Read\+Mesh}!read\+\_\+mesh\+\_\+cells@{read\+\_\+mesh\+\_\+cells}}
+\index{read\+\_\+mesh\+\_\+cells@{read\+\_\+mesh\+\_\+cells}!mfm\+::\+Read\+Mesh@{mfm\+::\+Read\+Mesh}}
+\subsubsection{\texorpdfstring{read\+\_\+mesh\+\_\+cells()}{read\_mesh\_cells()}}
+{\footnotesize\ttfamily template$<$unsigned Tdim$>$ \\
+std\+::vector$<$std\+::vector$<$\hyperlink{namespacemfm_a7d021c8caa1852f673d78358edc6b7f9}{mfm\+::\+Index}$>$ $>$ \hyperlink{classmfm_1_1_read_mesh}{mfm\+::\+Read\+Mesh}$<$ Tdim $>$\+::read\+\_\+mesh\+\_\+cells (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mesh }\end{DoxyParamCaption})}
+
+Read mesh cells file 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mesh} & file name with nodes and cells \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em cells} & Vector of nodal indices of cells \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classmfm_1_1_read_mesh_aad9a82f738f2f49010a5ca7c218855ce}\label{classmfm_1_1_read_mesh_aad9a82f738f2f49010a5ca7c218855ce}} 
+\index{mfm\+::\+Read\+Mesh@{mfm\+::\+Read\+Mesh}!read\+\_\+nodes@{read\+\_\+nodes}}
+\index{read\+\_\+nodes@{read\+\_\+nodes}!mfm\+::\+Read\+Mesh@{mfm\+::\+Read\+Mesh}}
+\subsubsection{\texorpdfstring{read\+\_\+nodes()}{read\_nodes()}}
+{\footnotesize\ttfamily template$<$unsigned Tdim$>$ \\
+std\+::vector$<$ Eigen\+::\+Matrix$<$ double, Tdim, 1 $>$ $>$ \hyperlink{classmfm_1_1_read_mesh}{mfm\+::\+Read\+Mesh}$<$ Tdim $>$\+::read\+\_\+nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Read particles file 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em particles\+\_\+files} & file name with particle coordinates \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em coordinates} & Vector of particle coordinates \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/read\+\_\+mesh.\+h\end{DoxyCompactItemize}
