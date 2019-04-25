@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.13"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>mpm: mfm Namespace Reference</title>
+        <title>mfm: mfm Namespace Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -29,7 +29,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">mpm Alpha</a>
+                    <a class="navbar-brand">mfm Alpha</a>
                 </div>
             </div>
         </nav>
@@ -71,13 +71,14 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">mfm Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classmfm_1_1_m_f_m.html">MFM</a> namespace.  
+<p>mfm namespace  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -94,6 +95,9 @@ Data Structures</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input/Output handler.  <a href="classmfm_1_1_i_o.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_material.html">Material</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_mesh.html">Mesh</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that stores the information about the input mesh.  <a href="classmfm_1_1_mesh.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_m_f_m.html">MFM</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,15 +117,38 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_read_mesh.html">ReadMesh</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that returns mesh and particles locataions based on GMesh ascii file.  <a href="classmfm_1_1_read_mesh.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_triangle_quadrature.html">TriangleQuadrature</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">quadrature (gauss points) for a triangular element  <a href="classmfm_1_1_triangle_quadrature.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_triangular_element.html">TriangularElement</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangular element  <a href="classmfm_1_1_triangular_element.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a7d021c8caa1852f673d78358edc6b7f9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfm.html#a7d021c8caa1852f673d78358edc6b7f9">Index</a> = unsigned long long</td></tr>
-<tr class="memdesc:a7d021c8caa1852f673d78358edc6b7f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global index type for the node_base.  <a href="#a7d021c8caa1852f673d78358edc6b7f9">More...</a><br /></td></tr>
+<tr class="memdesc:a7d021c8caa1852f673d78358edc6b7f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global index type for the cell.  <a href="#a7d021c8caa1852f673d78358edc6b7f9">More...</a><br /></td></tr>
 <tr class="separator:a7d021c8caa1852f673d78358edc6b7f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ac3b0bc912ed86bf13802ec8b912fce51"><td class="memItemLeft" align="right" valign="top"><a id="ac3b0bc912ed86bf13802ec8b912fce51"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ElementTypes</b> { <b>line</b> =1, 
+<b>triangular</b> =2, 
+<b>quadrilateral</b> =3, 
+<b>tetrahedral</b> =4
+ }</td></tr>
+<tr class="separator:ac3b0bc912ed86bf13802ec8b912fce51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85b6d6a2d06906044820e960c0f68fdd"><td class="memItemLeft" align="right" valign="top"><a id="a85b6d6a2d06906044820e960c0f68fdd"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>CellTypes</b> { <b>line</b> =1, 
+<b>triangle</b> =2, 
+<b>quad</b> =3, 
+<b>tetrahedron</b> =4
+ }</td></tr>
+<tr class="separator:a85b6d6a2d06906044820e960c0f68fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classmfm_1_1_m_f_m.html">MFM</a> namespace. </p>
+<div class="textblock"><p>mfm namespace </p>
+<p>mfm Namespace</p>
+<p><a class="el" href="classmfm_1_1_m_f_m.html">MFM</a> namespace. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
 <a id="a7d021c8caa1852f673d78358edc6b7f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d021c8caa1852f673d78358edc6b7f9">&#9670;&nbsp;</a></span>Index</h2>
@@ -135,9 +162,9 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Global index type for the cell. </p>
+<p>Global index type for the particleBase.</p>
 <p>Global index type for the node_base. </p>
-<p>Global index type for the cell.</p>
-<p>Global index type for the particleBase. </p>
 
 </div>
 </div>

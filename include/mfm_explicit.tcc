@@ -41,7 +41,41 @@ bool mfm::MFMExplicit<Tdim>::initialise_nodes()
 
 
 
-	mesh_reader->read_mesh_cells(1);
+	// Read cells which match the given ID
+	auto cells = mesh_reader->read_mesh_cells(4);
+
+	for ( const auto & cell_ : cells)
+	{
+
+		for ( auto i = cell_.begin() ; i != cell_.end(); ++i)
+		{
+		std::cout << *i << ",";
+
+		}
+		std::cout << std::endl;
+	}
+
+
+	// We can now read mesh_cells
+
+
+
+	// we probably need to create a mesh 
+
+
+
+	// If they are blockset use the celsl to generate material points
+	//domain_->generate_material_points(cells,quad_points)
+
+
+
+
+	// read velocity constraint nodes with ID_1
+	// create_velocity constraint ( mesh_reader->read_velocity(ID), std::array<2> {DOF and DOUBLE })
+
+
+	// CREATING MATERIAL POINTS WILL BE A PAIN
+	 // - A HUGE PAIN}
 
 
 	return status;
@@ -59,9 +93,19 @@ bool mfm::MFMExplicit<Tdim>::initialise_mesh()
 
 
 	// Read elemnets
-
+	auto nodal_coords = mesh_reader->read_nodes();
+	auto cells = mesh_reader->read_mesh_cells(4);
 
 	// read velocity constraints
+	std::cout << "got out " << std::endl;
+
+
+
+	// print coordinates out
+	unsigned ID_MESH = 1;
+	auto mesh_ = std::make_unique<Mesh<Tdim>>(ID_MESH);
+
+
 
 
 	// read pressure boundary conditions
@@ -124,8 +168,8 @@ bool mfm::MFMExplicit<Tdim>::solve()
 {
 
 
-	this->initialise_nodes();
-	//this->initialise_mesh();
+	//this->initialise_nodes();
+	this->initialise_mesh();
 
 
 	return false;

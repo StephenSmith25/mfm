@@ -111,7 +111,7 @@ std::vector<Eigen::Matrix<double,Tdim,1>> mfm::ReadMesh<Tdim>::read_nodes()
 //! Read mesh elements of a particular id
 template <unsigned Tdim>
 std::vector<std::vector<mfm::Index>> mfm::ReadMesh<Tdim>::read_mesh_cells(
-			const mfm::Index id)
+			const int id)
 {
 
 	// Mesh cells
@@ -121,7 +121,7 @@ std::vector<std::vector<mfm::Index>> mfm::ReadMesh<Tdim>::read_mesh_cells(
 
 
 	//  Cell type
-	int cellType = -1;
+	int celltype;
 
 	// cell id
 	int cellID = -1;
@@ -139,13 +139,13 @@ std::vector<std::vector<mfm::Index>> mfm::ReadMesh<Tdim>::read_mesh_cells(
 
 
 
+
 	try {
 		if (file.is_open() && file.good()) {
 			// line
 			std::string line;
 			// input stream class to operate on strings
 			std::istringstream istream(line);
-			std::cout << line << std::endl;
 			// iterate over lines
 			while (std::getline(file, line))
 			{
@@ -167,20 +167,76 @@ std::vector<std::vector<mfm::Index>> mfm::ReadMesh<Tdim>::read_mesh_cells(
 						std::getline(file, line);
 						// Trim the line
 						boost::algorithm::trim(line);
+						bool newCell = false;
+
 
 						while(line.compare(elementsEnd) != 0)
 						{
+
+							// Boolean of whether a new cell was added
+							newCell = false;
+
+
+							cell.clear();
 
 							// Trim the line
 							boost::algorithm::trim(line);
 							std::istringstream istream(line);
 
-							// check id matches
-							// if so then add to 
+							// Split each line into tokens serpated by a space 
+							std::vector<std::string> tokens;
+							boost::split(tokens,line,boost::is_any_of(" ")); 
 
-							std::cout << line << std::endl;
+							// First entry is node number
 
+							celltype = std::stoi(tokens.at(1));
+
+
+
+							cellID = std::stoi(tokens.at(3));
 				
+							//std::cout << tokens.at(1) << std::endl;	
+							if ( cellID == id){
+
+								newCell = true;
+
+
+								// line elemnt
+								if ( celltype == 1){
+								for ( unsigned i = 0 ; i < 2 ; ++i)
+									{
+										cell.emplace_back(std::stoll(tokens.at(5+i)) -1 );
+									}
+								}
+								// triangular element 
+								if ( celltype == 2){
+									for ( unsigned i = 0 ; i < 3 ; ++i)
+									{
+									cell.emplace_back(std::stoll(tokens.at(5+i)) -1 );
+									}
+								}
+								// quad
+								if ( celltype == 3){
+								for ( unsigned i = 0 ; i < 4 ; ++i)
+									{
+										cell.emplace_back(std::stoll(tokens.at(5+i)) -1 );
+									}
+								}
+
+								// tet
+								if ( celltype == 4){
+								for ( unsigned i = 0 ; i < 4 ; ++i)
+									{
+										cell.emplace_back(std::stoll(tokens.at(5+i)) -1 );
+									}
+
+								}
+
+
+							}
+
+							//  If a new cell was genrated add it to the list
+							if ( newCell) cells.emplace_back(cell);
 							// Get new line
 							std::getline(file, line);
 							// Trim the line
@@ -201,6 +257,7 @@ std::vector<std::vector<mfm::Index>> mfm::ReadMesh<Tdim>::read_mesh_cells(
 		file.close();
 
 	}
+
 
 
 	return cells;

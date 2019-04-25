@@ -9,17 +9,12 @@
 #include <vector>
 #include "eigen3/Eigen/Dense"
 #include "boost/algorithm/string.hpp"
+#include "boost/foreach.hpp"
+#include "boost/tokenizer.hpp"
+
+
 
 namespace mfm {
-
-
-
-	enum CellTypes{
-		line =1,
-		triangle=2,
-		quad=3,
-		tetrahedron=4
-	};
 
 	//! Global index type for the cell
 	using Index = unsigned long long;
@@ -53,7 +48,7 @@ namespace mfm {
 		//! \param[in] mesh ID within gmesh file
 		//! \retval cells Vector of nodal indices of cells
 		std::vector<std::vector<mfm::Index>> read_mesh_cells(
-			const mfm::Index id);
+			const int id );
 
 
 

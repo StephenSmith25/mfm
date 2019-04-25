@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.13"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>mpm: mfm::ReadMesh&lt; Tdim &gt; Class Template Reference</title>
+        <title>mfm: mfm::ReadMesh&lt; Tdim &gt; Class Template Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -29,7 +29,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">mpm Alpha</a>
+                    <a class="navbar-brand">mfm Alpha</a>
                 </div>
             </div>
         </nav>
@@ -101,10 +101,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aca466723f1ea120fc76ec8cee2e62a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a205f0231970ab4511eb07ba7ecfcff47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_read_mesh.html#a205f0231970ab4511eb07ba7ecfcff47">ReadMesh</a> (std::string filename)</td></tr>
 <tr class="separator:a205f0231970ab4511eb07ba7ecfcff47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fe80e6e5bec7a835ffa03ef5ad92056"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="namespacemfm.html#a7d021c8caa1852f673d78358edc6b7f9">mfm::Index</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_read_mesh.html#a7fe80e6e5bec7a835ffa03ef5ad92056">read_mesh_cells</a> (const std::string &amp;mesh)</td></tr>
-<tr class="separator:a7fe80e6e5bec7a835ffa03ef5ad92056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b45d5d6f4c09678d711547312995d14"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="namespacemfm.html#a7d021c8caa1852f673d78358edc6b7f9">mfm::Index</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_read_mesh.html#a3b45d5d6f4c09678d711547312995d14">read_mesh_cells</a> (const int id)</td></tr>
+<tr class="memdesc:a3b45d5d6f4c09678d711547312995d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read mesh elements of a particular id.  <a href="#a3b45d5d6f4c09678d711547312995d14">More...</a><br /></td></tr>
+<tr class="separator:a3b45d5d6f4c09678d711547312995d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad9a82f738f2f49010a5ca7c218855ce"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmfm_1_1_read_mesh.html#a0dcd4f554ae2784be3fa53e547b2f6a9">VectorDim</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_read_mesh.html#aad9a82f738f2f49010a5ca7c218855ce">read_nodes</a> ()</td></tr>
 <tr class="separator:aad9a82f738f2f49010a5ca7c218855ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d2785446a9e0729fbfb166123588872"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="namespacemfm.html#a7d021c8caa1852f673d78358edc6b7f9">mfm::Index</a>, unsigned, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_read_mesh.html#a3d2785446a9e0729fbfb166123588872">read_velocity_constraints</a> ()</td></tr>
+<tr class="separator:a3d2785446a9e0729fbfb166123588872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;unsigned Tdim&gt;<br />
@@ -154,8 +157,8 @@ template&lt;unsigned Tdim&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7fe80e6e5bec7a835ffa03ef5ad92056"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fe80e6e5bec7a835ffa03ef5ad92056">&#9670;&nbsp;</a></span>read_mesh_cells()</h2>
+<a id="a3b45d5d6f4c09678d711547312995d14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b45d5d6f4c09678d711547312995d14">&#9670;&nbsp;</a></span>read_mesh_cells()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,17 +166,19 @@ template&lt;unsigned Tdim&gt; </div>
 template&lt;unsigned Tdim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::vector&lt;<a class="el" href="namespacemfm.html#a7d021c8caa1852f673d78358edc6b7f9">mfm::Index</a>&gt; &gt; <a class="el" href="classmfm_1_1_read_mesh.html">mfm::ReadMesh</a>&lt; Tdim &gt;::read_mesh_cells </td>
+          <td class="memname">std::vector&lt; std::vector&lt; <a class="el" href="namespacemfm.html#a7d021c8caa1852f673d78358edc6b7f9">mfm::Index</a> &gt; &gt; <a class="el" href="classmfm_1_1_read_mesh.html">mfm::ReadMesh</a>&lt; Tdim &gt;::read_mesh_cells </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Read mesh cells file </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Read mesh elements of a particular id. </p>
+<p>Read mesh elements of a particular id </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>file name with nodes and cells </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>ID within gmesh file </td></tr>
   </table>
   </dd>
 </dl>
@@ -202,15 +207,34 @@ template&lt;unsigned Tdim&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Read particles file </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">particles_files</td><td>file name with particle coordinates </td></tr>
+<p>Read nodes from mesh file filename_ </p><dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">coordinates</td><td>Vector of nodal coordinates </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="retval"><dt>Return values</dt><dd>
+
+</div>
+</div>
+<a id="a3d2785446a9e0729fbfb166123588872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d2785446a9e0729fbfb166123588872">&#9670;&nbsp;</a></span>read_velocity_constraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned Tdim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple&lt;<a class="el" href="namespacemfm.html#a7d021c8caa1852f673d78358edc6b7f9">mfm::Index</a>, unsigned , double &gt; <a class="el" href="classmfm_1_1_read_mesh.html">mfm::ReadMesh</a>&lt; Tdim &gt;::read_velocity_constraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>read nodal velocity constraints </p><dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">coordinates</td><td>Vector of particle coordinates </td></tr>
+    <tr><td class="paramname">tuple</td><td>of &lt;nodal Index, degree of freedom (x,y,z), constraint&gt; </td></tr>
   </table>
   </dd>
 </dl>

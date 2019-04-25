@@ -38,7 +38,7 @@ template<unsigned dim>
 
 	};
 
-} // end name space
+}//! end name space
 
 
 #endif 

@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.13"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>mpm: mfm::MFMExplicit&lt; Tdim &gt; Class Template Reference</title>
+        <title>mfm: mfm::MFMExplicit&lt; Tdim &gt; Class Template Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -29,7 +29,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">mpm Alpha</a>
+                    <a class="navbar-brand">mfm Alpha</a>
                 </div>
             </div>
         </nav>
@@ -108,6 +108,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_m_f_m_explicit.html#a2067a261bf027b9c0a34cb94b0d55527">initialise_nodes</a> () override</td></tr>
 <tr class="memdesc:a2067a261bf027b9c0a34cb94b0d55527"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intialise nodes. <br /></td></tr>
 <tr class="separator:a2067a261bf027b9c0a34cb94b0d55527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec370cc632f0bcd6b43563408da216f3"><td class="memItemLeft" align="right" valign="top"><a id="aec370cc632f0bcd6b43563408da216f3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_m_f_m_explicit.html#aec370cc632f0bcd6b43563408da216f3">initialise_domain</a> () override</td></tr>
+<tr class="memdesc:aec370cc632f0bcd6b43563408da216f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intialise <a class="el" href="classmfm_1_1_domain.html" title="Class that stores information about the domain. ">Domain</a>. <br /></td></tr>
+<tr class="separator:aec370cc632f0bcd6b43563408da216f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72d51d04855c10a843a654140f7f8c98"><td class="memItemLeft" align="right" valign="top"><a id="a72d51d04855c10a843a654140f7f8c98"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_m_f_m_explicit.html#a72d51d04855c10a843a654140f7f8c98">initialise_particles</a> () override</td></tr>
 <tr class="memdesc:a72d51d04855c10a843a654140f7f8c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise particles. <br /></td></tr>
@@ -129,7 +133,8 @@ std::unique_ptr&lt; <a class="el" href="classmfm_1_1_domain.html">mfm::Domain</a
 <tr class="separator:a8ffcb7f9541221c76a9ab163bb7d574e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classmfm_1_1_m_f_m"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmfm_1_1_m_f_m')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmfm_1_1_m_f_m.html">mfm::MFM</a></td></tr>
 <tr class="memitem:ae4a3f4844f4d9affcc9b814fbd89be96 inherit pro_attribs_classmfm_1_1_m_f_m"><td class="memItemLeft" align="right" valign="top"><a id="ae4a3f4844f4d9affcc9b814fbd89be96"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>uuid_</b></td></tr>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_m_f_m.html#ae4a3f4844f4d9affcc9b814fbd89be96">uuid_</a></td></tr>
+<tr class="memdesc:ae4a3f4844f4d9affcc9b814fbd89be96 inherit pro_attribs_classmfm_1_1_m_f_m"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique id for the problem. <br /></td></tr>
 <tr class="separator:ae4a3f4844f4d9affcc9b814fbd89be96 inherit pro_attribs_classmfm_1_1_m_f_m"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48087e7734feaeb0a8cf763a57a4f97b inherit pro_attribs_classmfm_1_1_m_f_m"><td class="memItemLeft" align="right" valign="top"><a id="a48087e7734feaeb0a8cf763a57a4f97b"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_m_f_m.html#a48087e7734feaeb0a8cf763a57a4f97b">dt_</a> {std::numeric_limits&lt;double&gt;::max()}</td></tr>
@@ -137,7 +142,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <tr class="separator:a48087e7734feaeb0a8cf763a57a4f97b inherit pro_attribs_classmfm_1_1_m_f_m"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99a022cfd0a14d18a2b7e2449f35a8e1 inherit pro_attribs_classmfm_1_1_m_f_m"><td class="memItemLeft" align="right" valign="top"><a id="a99a022cfd0a14d18a2b7e2449f35a8e1"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_m_f_m.html#a99a022cfd0a14d18a2b7e2449f35a8e1">axi_</a> {false}</td></tr>
-<tr class="memdesc:a99a022cfd0a14d18a2b7e2449f35a8e1 inherit pro_attribs_classmfm_1_1_m_f_m"><td class="mdescLeft">&#160;</td><td class="mdescRight">AXISYMMETRIC. <br /></td></tr>
+<tr class="memdesc:a99a022cfd0a14d18a2b7e2449f35a8e1 inherit pro_attribs_classmfm_1_1_m_f_m"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the formulation is axisymmetric. <br /></td></tr>
 <tr class="separator:a99a022cfd0a14d18a2b7e2449f35a8e1 inherit pro_attribs_classmfm_1_1_m_f_m"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b438e05bf767bda02514754c2ec6336 inherit pro_attribs_classmfm_1_1_m_f_m"><td class="memItemLeft" align="right" valign="top"><a id="a6b438e05bf767bda02514754c2ec6336"></a>
 <a class="el" href="namespacemfm.html#a7d021c8caa1852f673d78358edc6b7f9">mfm::Index</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_m_f_m.html#a6b438e05bf767bda02514754c2ec6336">step_</a> {0}</td></tr>

@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.13"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>mpm: Data Fields - Functions</title>
+        <title>mfm: Data Fields - Functions</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -29,7 +29,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">mpm Alpha</a>
+                    <a class="navbar-brand">mfm Alpha</a>
                 </div>
             </div>
         </nav>
@@ -86,6 +86,9 @@ $(function() {
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
+<li>create_elements()
+: <a class="el" href="classmfm_1_1_mesh.html#a57dc090008862eed17b6500a1a2dfd19">mfm::Mesh&lt; Tdim &gt;</a>
+</li>
 <li>create_nodes()
 : <a class="el" href="classmfm_1_1_domain.html#a2098bfbd63556a6cd93fb852d704c1c4">mfm::Domain&lt; Tdim &gt;</a>
 </li>
@@ -106,13 +109,21 @@ $(function() {
 <li>get_mesh_file_name()
 : <a class="el" href="classmfm_1_1_i_o.html#a0d6ea2ff1127c76b13bd33f4d300f8e1">mfm::IO</a>
 </li>
+<li>grad_shapefn()
+: <a class="el" href="classmfm_1_1_triangular_element.html#a714a569c029f5b01bee05c1d2e3b44dd">mfm::TriangularElement&lt; Tdim &gt;</a>
+</li>
 </ul>
 
 
 <h3><a id="index_i"></a>- i -</h3><ul>
 <li>id()
 : <a class="el" href="classmfm_1_1_domain.html#a39557a2418dd51a972a2c09ed266ea15">mfm::Domain&lt; Tdim &gt;</a>
+, <a class="el" href="classmfm_1_1_mesh.html#a2376a8b37edb1a1375321b79cbb92e34">mfm::Mesh&lt; Tdim &gt;</a>
 , <a class="el" href="classmfm_1_1_particle_base.html#af0e7293eaedd690be27619c9add4066c">mfm::ParticleBase&lt; Tdim &gt;</a>
+</li>
+<li>initialise_domain()
+: <a class="el" href="classmfm_1_1_m_f_m.html#a036c9e46a07fd56c28f2c0c2c3344ca7">mfm::MFM</a>
+, <a class="el" href="classmfm_1_1_m_f_m_explicit.html#aec370cc632f0bcd6b43563408da216f3">mfm::MFMExplicit&lt; Tdim &gt;</a>
 </li>
 <li>initialise_mesh()
 : <a class="el" href="classmfm_1_1_m_f_m_explicit.html#a9621f2e63e9d3dd3e8f31c2fbe9e5b35">mfm::MFMExplicit&lt; Tdim &gt;</a>
@@ -134,6 +145,9 @@ $(function() {
 <li>MaterialPoint()
 : <a class="el" href="class_material_point.html#ac89f3f94be53691e347ffbda8d772b60">MaterialPoint&lt; Tdim &gt;</a>
 </li>
+<li>Mesh()
+: <a class="el" href="classmfm_1_1_mesh.html#a46757c28ecd670d5df4b35f84dcaf21d">mfm::Mesh&lt; Tdim &gt;</a>
+</li>
 <li>MFMExplicit()
 : <a class="el" href="classmfm_1_1_m_f_m_explicit.html#a3b1473505cf73cd6c3589439d9216025">mfm::MFMExplicit&lt; Tdim &gt;</a>
 </li>
@@ -143,6 +157,9 @@ $(function() {
 <h3><a id="index_n"></a>- n -</h3><ul>
 <li>nnodes()
 : <a class="el" href="classmfm_1_1_domain.html#a895efdb39e864f421af7e34f1e44d1b1">mfm::Domain&lt; Tdim &gt;</a>
+</li>
+<li>nodal_coordinates()
+: <a class="el" href="classmfm_1_1_domain.html#ac946a1a33ba28882761963aed9c6a35e">mfm::Domain&lt; Tdim &gt;</a>
 </li>
 <li>Node()
 : <a class="el" href="classmfm_1_1_node.html#ac5897f6e82a9d032cb22b14d5ac00ab9">mfm::Node&lt; Tdim &gt;</a>
@@ -156,6 +173,7 @@ $(function() {
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>operator=()
 : <a class="el" href="classmfm_1_1_domain.html#ac62e769317bb03385c6d4404f08173fc">mfm::Domain&lt; Tdim &gt;</a>
+, <a class="el" href="classmfm_1_1_mesh.html#aea2a6258277aaebec75c02977658618d">mfm::Mesh&lt; Tdim &gt;</a>
 , <a class="el" href="classmfm_1_1_node.html#a61863270265a582ad503cadf99e515ee">mfm::Node&lt; Tdim &gt;</a>
 </li>
 </ul>
@@ -168,15 +186,22 @@ $(function() {
 </ul>
 
 
-<h3><a id="index_r"></a>- r -</h3><ul>
-<li>read_input_file()
-: <a class="el" href="classmfm_1_1_domain.html#a2d0d731e83960bc649020b68c2be2994">mfm::Domain&lt; Tdim &gt;</a>
+<h3><a id="index_q"></a>- q -</h3><ul>
+<li>quadratures()
+: <a class="el" href="classmfm_1_1_triangular_element.html#aec4ffd83f5b88b6bdb559e4db4ca0085">mfm::TriangularElement&lt; Tdim &gt;</a>
 </li>
+</ul>
+
+
+<h3><a id="index_r"></a>- r -</h3><ul>
 <li>read_mesh_cells()
-: <a class="el" href="classmfm_1_1_read_mesh.html#a7fe80e6e5bec7a835ffa03ef5ad92056">mfm::ReadMesh&lt; Tdim &gt;</a>
+: <a class="el" href="classmfm_1_1_read_mesh.html#a3b45d5d6f4c09678d711547312995d14">mfm::ReadMesh&lt; Tdim &gt;</a>
 </li>
 <li>read_nodes()
 : <a class="el" href="classmfm_1_1_read_mesh.html#aad9a82f738f2f49010a5ca7c218855ce">mfm::ReadMesh&lt; Tdim &gt;</a>
+</li>
+<li>read_velocity_constraints()
+: <a class="el" href="classmfm_1_1_read_mesh.html#a3d2785446a9e0729fbfb166123588872">mfm::ReadMesh&lt; Tdim &gt;</a>
 </li>
 <li>ReadMesh()
 : <a class="el" href="classmfm_1_1_read_mesh.html#aca466723f1ea120fc76ec8cee2e62a98">mfm::ReadMesh&lt; Tdim &gt;</a>
@@ -191,8 +216,18 @@ $(function() {
 <li>set_mesh_file_name()
 : <a class="el" href="classmfm_1_1_i_o.html#a5f98edbe9062abf067d440b4a592e002">mfm::IO</a>
 </li>
+<li>shapefn()
+: <a class="el" href="classmfm_1_1_triangular_element.html#acb45fab4e5ea83520b0e1bde2be55b76">mfm::TriangularElement&lt; Tdim &gt;</a>
+</li>
 <li>solve()
 : <a class="el" href="classmfm_1_1_m_f_m_explicit.html#a6d91f7c7dc52218f1a8aed74946c4391">mfm::MFMExplicit&lt; Tdim &gt;</a>
+</li>
+</ul>
+
+
+<h3><a id="index_t"></a>- t -</h3><ul>
+<li>TriangularElement()
+: <a class="el" href="classmfm_1_1_triangular_element.html#a0f51110e7c6a4b879211cae78c9758de">mfm::TriangularElement&lt; Tdim &gt;</a>
 </li>
 </ul>
 
@@ -200,6 +235,9 @@ $(function() {
 <h3><a id="index_0x7e"></a>- ~ -</h3><ul>
 <li>~Domain()
 : <a class="el" href="classmfm_1_1_domain.html#a9c4cc16b90112f5d7baca60e11487b90">mfm::Domain&lt; Tdim &gt;</a>
+</li>
+<li>~Mesh()
+: <a class="el" href="classmfm_1_1_mesh.html#a1a537e25beece67265ffda239e29f377">mfm::Mesh&lt; Tdim &gt;</a>
 </li>
 <li>~Node()
 : <a class="el" href="classmfm_1_1_node.html#acdfae40a74b72f3016b2f4f6fa9bfa56">mfm::Node&lt; Tdim &gt;</a>

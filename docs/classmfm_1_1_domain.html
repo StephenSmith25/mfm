@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.13"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>mpm: mfm::Domain&lt; Tdim &gt; Class Template Reference</title>
+        <title>mfm: mfm::Domain&lt; Tdim &gt; Class Template Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -29,7 +29,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">mpm Alpha</a>
+                    <a class="navbar-brand">mfm Alpha</a>
                 </div>
             </div>
         </nav>
@@ -124,16 +124,16 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="separator:ab0d54b4f3be6ab4ea43af70d9beb3370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a895efdb39e864f421af7e34f1e44d1b1"><td class="memItemLeft" align="right" valign="top"><a id="a895efdb39e864f421af7e34f1e44d1b1"></a>
 <a class="el" href="namespacemfm.html#a7d021c8caa1852f673d78358edc6b7f9">mfm::Index</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_domain.html#a895efdb39e864f421af7e34f1e44d1b1">nnodes</a> () const</td></tr>
-<tr class="memdesc:a895efdb39e864f421af7e34f1e44d1b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of nodes in the mesh. <br /></td></tr>
+<tr class="memdesc:a895efdb39e864f421af7e34f1e44d1b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of nodes in the domain. <br /></td></tr>
 <tr class="separator:a895efdb39e864f421af7e34f1e44d1b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae322699deacd071c5f4c789bf588cad7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_domain.html#ae322699deacd071c5f4c789bf588cad7">assign_velocity_constraints</a> (const std::vector&lt; std::tuple&lt; <a class="el" href="namespacemfm.html#a7d021c8caa1852f673d78358edc6b7f9">mfm::Index</a>, unsigned, double &gt;&gt; &amp;velocity_constraints)</td></tr>
 <tr class="separator:ae322699deacd071c5f4c789bf588cad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2edb71f67da7b927e9c2948ee5d3736"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_domain.html#af2edb71f67da7b927e9c2948ee5d3736">generate_material_points</a> (unsigned nquadratures=1)</td></tr>
 <tr class="separator:af2edb71f67da7b927e9c2948ee5d3736"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d0d731e83960bc649020b68c2be2994"><td class="memItemLeft" align="right" valign="top"><a id="a2d0d731e83960bc649020b68c2be2994"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_domain.html#a2d0d731e83960bc649020b68c2be2994">read_input_file</a> ()</td></tr>
-<tr class="memdesc:a2d0d731e83960bc649020b68c2be2994"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read mesh file. <br /></td></tr>
-<tr class="separator:a2d0d731e83960bc649020b68c2be2994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac946a1a33ba28882761963aed9c6a35e"><td class="memItemLeft" align="right" valign="top"><a id="ac946a1a33ba28882761963aed9c6a35e"></a>
+std::vector&lt; Eigen::Matrix&lt; double, 3, 1 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfm_1_1_domain.html#ac946a1a33ba28882761963aed9c6a35e">nodal_coordinates</a> () const</td></tr>
+<tr class="memdesc:ac946a1a33ba28882761963aed9c6a35e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return Nodal coordinates. <br /></td></tr>
+<tr class="separator:ac946a1a33ba28882761963aed9c6a35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;unsigned Tdim&gt;<br />
@@ -286,7 +286,6 @@ template&lt;unsigned Tdim&gt; </div>
 <p>Create nodes from coordinates </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">gnid</td><td>Global node id </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">node_type</td><td><a class="el" href="classmfm_1_1_node.html">Node</a> type </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">coordinates</td><td>Nodal coordinates </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">check_duplicates</td><td>Parameter to check duplicates </td></tr>
   </table>

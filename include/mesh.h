@@ -14,13 +14,17 @@
 #include "eigen3/Eigen/Dense"
 
 
-
+//! mfm namespace 
 namespace mfm
 {
-
 //! Global index type for the cell
 using Index = unsigned long long;
 
+
+
+//! \brief Class that stores the information about the input mesh.
+//  \brief Used for generating material points and nodes
+//! \tparam Tdim Dimension
 template <unsigned Tdim>
 class Mesh
 {
@@ -33,7 +37,19 @@ public:
 
 	// Construct a mesh with a global unique id
  	//! \param[in] id Global mesh id
-  	Mesh(unsigned id);
+  	Mesh(const unsigned id);
+
+  	//! Constructor with mesh details included 
+  	//! \param[in] nodal_coords - Nodal coordinates of verticies of mesh
+  	//! \param[in] cell_indicies - Indicies of mesh cells
+  	//! \param[in] etype - Element type 
+  	//! \param[in] id Global mesh id 
+  	Mesh(const std::vector<VectorDim> nodal_coords, 
+  		 const std::vector<std::vector<int>> cell_indices,
+  		 const ElementTypes etype,
+  		 const unsigned id);
+
+
 
  	//! Default destructor
  	~Mesh() = default;
@@ -44,10 +60,33 @@ public:
   	//! Delete assignement operator
  	Mesh& operator=(const Mesh<Tdim>&) = delete;
 
- 	//! Construct mesh from given input indicies
- 	//! \param[in] mesh indicies
- 	//! \param[in] element type
- 	void create_mesh(std::vector<std::vector<int>> indicies);
+ 	//! Set element type
+
+ 	//! Get element type
+
+
+ 	//! Get mesh nodes
+ 	// \param[out] container of mesh nodes
+	std::vector<VectorDim> get_mesh_nodes() const {
+
+ 	}
+ 	//! Get mesh cell indicies
+
+
+ 	// Construct MATERIAL POINTS
+ 	// Loop over each element,
+ 	// Find quadrature points
+ 	// Generate material points
+
+
+
+
+ 	//! Construct quadrature points 
+ 	//void create_quadrature_points();
+
+ 	//! Read velocity constraints
+ 	// \param[out] vector container tuples of <nodeIndex,DOF,Value>
+ 	//std::vector<std::tuple<mfm::Index,unsigned,double>> read_velocity_constraints(); 
 
   	//! Return id of the mesh
 	unsigned id() const { return id_; }
@@ -56,14 +95,26 @@ public:
 private:
 
 	//! Mesh id 
-	mfm::Index id_;
+	unsigned id_;
+
+	//! Element type
+	ElementTypes etype_;
 
 	//! Mesh type
 	std::string mesh_type_;
 
-	//! Container of elements
-	std::vector<Element<Tdim>> elements_;
 
+	//! Container of nodal coordinates
+	std::vector<VectorDim> nodal_coords;
+
+
+	//! Container of indicies that make up the mesh
+	std::vector<std::vector<int>> cell_indicies;
+
+	//! Element that the particular mesh is composed of 
+	std::shared_ptr<const Element<Tdim>> element_{nullptr};
+
+	// Material 
 
 
 
@@ -72,7 +123,7 @@ private:
 };
 
 
-
+#include "mesh.tcc"
 
 
 

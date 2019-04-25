@@ -6,12 +6,9 @@
 #include <memory.h>
 #include "node.h"
 #include "read_mesh.h"
-
+#include "mesh.h"
 
 namespace mfm{
-
-
-
 
 
 //! MFMExplicit class

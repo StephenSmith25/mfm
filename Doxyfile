@@ -4,9 +4,9 @@
 # Project related configuration options
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = UTF-8
-PROJECT_NAME           = mpm
+PROJECT_NAME           = mfm
 PROJECT_NUMBER         = Alpha
-PROJECT_BRIEF          = "Material Point Method"
+PROJECT_BRIEF          = "Meshfree method for explicit dynamical problems"
 PROJECT_LOGO           = 
 OUTPUT_DIRECTORY       = ./
 CREATE_SUBDIRS         = NO
@@ -167,7 +167,7 @@ HTML_TIMESTAMP         = NO
 HTML_DYNAMIC_SECTIONS  = NO
 HTML_INDEX_NUM_ENTRIES = 100
 GENERATE_DOCSET        = NO
-DOCSET_FEEDNAME        = "MPM docs"
+DOCSET_FEEDNAME        = "MFM docs"
 DOCSET_BUNDLE_ID       = org.doxygen.Project
 DOCSET_PUBLISHER_ID    = org.doxygen.Publisher
 DOCSET_PUBLISHER_NAME  = Publisher
@@ -210,7 +210,7 @@ EXTRA_SEARCH_MAPPINGS  =
 #---------------------------------------------------------------------------
 # Configuration options related to the LaTeX output
 #---------------------------------------------------------------------------
-GENERATE_LATEX         = YES
+GENERATE_LATEX         = NO
 LATEX_OUTPUT           = latex
 LATEX_CMD_NAME         = latex
 MAKEINDEX_CMD_NAME     = makeindex
