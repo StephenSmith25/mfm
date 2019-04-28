@@ -67,9 +67,7 @@ public:
 
  	//! Get mesh nodes
  	// \param[out] container of mesh nodes
-	std::vector<VectorDim> get_mesh_nodes() const {
-
- 	}
+	std::vector<VectorDim> get_mesh_nodes() const;
  	//! Get mesh cell indicies
 
 

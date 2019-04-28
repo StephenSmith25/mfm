@@ -3,8 +3,6 @@ template <unsigned Tdim>
 mfm::MFMExplicit<Tdim>::MFMExplicit(std::unique_ptr<IO>&& io) : mfm::MFM(std::move(io))
 {
 
-
-
 	std::cout << "in constructor for mfm " << std::endl;
 
 	// set analysis step to start at 0
@@ -106,6 +104,18 @@ bool mfm::MFMExplicit<Tdim>::initialise_mesh()
 	auto mesh_ = std::make_unique<Mesh<Tdim>>(ID_MESH);
 
 
+	// SO ive read the cells, I need to make the mesh to make the elements to make the material poitns
+	// I need to deal with the physcial groups
+	// I need to do a few other things to get it working
+	// I need to handle the json file.
+	// Am I going to continue pushign down this visual studio route, or am i going to move on to 
+	// trying to get linxu working on this laptop
+	// Maybe I can try docker.
+
+
+
+
+
 
 
 	// read pressure boundary conditions
@@ -151,6 +161,8 @@ bool mfm::MFMExplicit<Tdim>::initialise_domain()
 
 
 	// we can then get traction and pressure loads
+
+	return false;
 }
 
 template <unsigned Tdim>
@@ -168,7 +180,7 @@ bool mfm::MFMExplicit<Tdim>::solve()
 {
 
 
-	//this->initialise_nodes();
+	this->initialise_nodes();
 	this->initialise_mesh();
 
 

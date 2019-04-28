@@ -43,4 +43,7 @@ bool mfm::Domain<Tdim>::add_node(const std::shared_ptr<mfm::Node<Tdim> > &node,
 	// Add node to vector 
 	this->nodes_.push_back(node);
 
+
+	return false;
+
 }

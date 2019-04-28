@@ -13,12 +13,12 @@ mfm::Mesh<Tdim>::Mesh(const unsigned id)
 //! \param[in] Mesh vertex indicies
 //! \param[in] Element type
 //! \param[in] mesh id 
-template <unsigned Tdim>
-mfm::Mesh<Tdim>::Mesh()
-{
+//template <unsigned Tdim>
+//mfm::Mesh<Tdim>::Mesh()
+//{
 
 
 
 
 	
-}
+//}

@@ -1,14 +1,11 @@
 #include <iostream>
 #include <vector>
-
-
 #include "particle.h"
 #include <eigen3/Eigen/Dense>
 #include "read_mesh.h"
 #include "io.h"
 #include <memory>
 #include "mfm_explicit.h"
-
 
 
 
@@ -35,8 +32,11 @@ int main(int argc, char ** argv)
 
 	io->set_mesh_file_name(filename);
 
+
 	// Create an mfm anaylsis
 	auto mfm = std::make_unique<mfm::MFMExplicit<dim>>(std::move(io));
+
+	
 	mfm->solve();
 
 	// Mesh should contain all the nodes and elements, and subsequently the material points
@@ -69,6 +69,7 @@ int main(int argc, char ** argv)
 
 
 
-	
+	system("pause");
+
 	return 0;
 }
