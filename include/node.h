@@ -37,6 +37,10 @@ public:
   //! \param[in] coord Assign coord as coordinates of the nodebase
   void assign_coordinates(const VectorDim &coord) { coordinates_ = coord; }
 
+  VectorDim coordinates() const {
+    return coordinates_;
+  }
+
 private:
   //! Mutex
   std::mutex node_mutex_;

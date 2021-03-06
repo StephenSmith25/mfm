@@ -28,16 +28,7 @@ int main(int argc, char **argv) {
   // Create an mfm anaylsis
   auto mfm = std::make_unique<mfm::MFMExplicit<dim>>(std::move(io));
 
-  mfm->solve();
-
-  // Mesh should contain all the nodes and elements, and subsequently the
-  // material points
-
-  // Material points created and then mesh is destroyed
-
-  // mfm::ReadMesh<dim> mesh(filename);
-  // // read_nodes
-  // std::vector<VectorDim> nodal_coordinates = mesh.read_nodes();
+  //mfm->solve();
 
   // Create a domain
 

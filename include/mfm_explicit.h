@@ -6,6 +6,7 @@
 #include "node.h"
 #include "read_mesh.h"
 #include <memory.h>
+#include <iostream>
 
 namespace mfm {
 
@@ -57,6 +58,9 @@ private:
 
   //! AXISYMMETRIC
   bool AXI_{false};
+
+  std::unique_ptr<ReadMesh<Tdim>> m_meshreader;
+
 };
 
 #include "mfm_explicit.tcc"
