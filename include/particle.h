@@ -1,12 +1,12 @@
 #ifndef PARTICLE_H_
 #define PARTICLE_H_
 
+#include "particle_base.h"
 #include <array>
 #include <limits>
 #include <memory>
 #include <string>
 #include <vector>
-#include "particle_base.h"
 
 namespace mfm {
 
@@ -17,9 +17,7 @@ using Index = unsigned long long;
 //! \brief Base class that stores the information about particles
 //! \details Particle class: id_ and coordinates.
 //! \tparam Tdim Dimension
-template <unsigned dim>
-class Particle : public ParticleBase<dim>
-{
+template <unsigned dim> class Particle : public ParticleBase<dim> {
 
   //! Define a vector of size dimension
   using VectorDim = Eigen::Matrix<double, dim, 1>;
@@ -27,21 +25,12 @@ class Particle : public ParticleBase<dim>
   //! Define DOFs
   static const unsigned dof = (dim == 1) ? 1 : 3 * (dim - 1);
 
-
   //! Construct a particle with id, coordinates and status
   //! \param[in] id Particle id
   //! \param[in] coord coordinates of the particle
-  Particle(Index id, const VectorDim& coord);
-
-
-
+  Particle(Index id, const VectorDim &coord);
 };
 
+} // namespace mfm
 
-
-
-}
-
-
-
-#endif 
+#endif
