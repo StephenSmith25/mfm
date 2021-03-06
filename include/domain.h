@@ -69,7 +69,7 @@ public:
   void generate_material_points(unsigned nquadratures = 1);
 
   //! Return Nodal coordinates
-  std::vector<Eigen::Matrix<double, 3, 1>> nodal_coordinates() const;
+  std::vector<VectorDim> nodal_coordinates() const;
 
 private:
   unsigned id_;

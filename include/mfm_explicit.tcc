@@ -12,7 +12,13 @@ mfm::MFMExplicit<Tdim>::MFMExplicit(std::unique_ptr<IO>&& io) : mfm::MFM(std::mo
 	// Create a domain with global id 0
 	const mfm::Index id = 0;	
 	domain_ = std::make_unique<mfm::Domain<Tdim>>(id);
-	// Json stuff
+
+	m_meshreader = std::make_unique<ReadMesh<Tdim>>(this->io_->get_mesh_file_name());
+
+	this->initialise_nodes();
+	this->initialise_mesh();
+
+
 
 }
 // Initialise nodes
@@ -23,7 +29,6 @@ bool mfm::MFMExplicit<Tdim>::initialise_nodes()
 
 	bool status = true;
 	// create a mesh reader
-	auto mesh_reader = std::make_shared<ReadMesh<Tdim>>(this->io_->get_mesh_file_name());
 
 
 	// Global Index
@@ -33,25 +38,32 @@ bool mfm::MFMExplicit<Tdim>::initialise_nodes()
 
 	// create nodes from file
 	domain_->create_nodes(gid,
-	mesh_reader->read_nodes(),
+	m_meshreader->read_nodes(),
 	check_duplicate);
 
 
+	auto nodalCoords = domain_->nodal_coordinates();
 
-
-	// Read cells which match the given ID
-	auto cells = mesh_reader->read_mesh_cells(4);
-
-	for ( const auto & cell_ : cells)
+	for (const auto& node : nodalCoords)
 	{
 
-		for ( auto i = cell_.begin() ; i != cell_.end(); ++i)
-		{
-		std::cout << *i << ",";
-
-		}
-		std::cout << std::endl;
+		std::cout << node << std::endl;
 	}
+
+
+	// // Read cells which match the given ID
+	// auto cells = mesh_reader->read_mesh_cells(4);
+
+	// for ( const auto & cell_ : cells)
+	// {
+
+	// 	for ( auto i = cell_.begin() ; i != cell_.end(); ++i)
+	// 	{
+	// 	std::cout << *i << ",";
+
+	// 	}
+	// 	std::cout << std::endl;
+	// }
 
 
 	// We can now read mesh_cells
@@ -87,16 +99,11 @@ bool mfm::MFMExplicit<Tdim>::initialise_mesh()
 
 	bool status = true;
 
-	auto mesh_reader = std::make_shared<ReadMesh<Tdim>>(this->io_->get_mesh_file_name());
-
-
 	// Read elemnets
-	auto nodal_coords = mesh_reader->read_nodes();
-	auto cells = mesh_reader->read_mesh_cells(4);
+	auto nodal_coords = m_meshreader->read_nodes();
+	auto cells = m_meshreader->read_mesh_cells(4);
 
 	// read velocity constraints
-	std::cout << "got out " << std::endl;
-
 
 
 	// print coordinates out
@@ -138,7 +145,6 @@ template <unsigned Tdim>
 bool mfm::MFMExplicit<Tdim>::initialise_domain()
 {
 	bool status = true;
-	auto mesh_reader = std::make_shared<ReadMesh<Tdim>>(this->io_->get_mesh_file_name());
 
 	// using the mesh reader we can get the nodes
 
@@ -178,10 +184,6 @@ bool mfm::MFMExplicit<Tdim>::initialise_particles()
 template <unsigned Tdim>
 bool mfm::MFMExplicit<Tdim>::solve()
 {
-
-
-	this->initialise_nodes();
-	this->initialise_mesh();
 
 
 	return false;

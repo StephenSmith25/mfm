@@ -12,7 +12,4 @@ mfm::Node<Tdim>::Node(mfm::Index id, const VectorDim& coords)
 	dof_ = Tdim;
 
 
-	// clear any velocity constraints
-
-
 }

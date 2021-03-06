@@ -29,11 +29,7 @@ bool mfm::Domain<Tdim>::create_nodes(mfm::Index gnid,
  		std::make_shared<Node<Tdim>>(gnid, node_coordinates));
  		if ( insert_status ) ++gnid;
  	}
- 	// for ( const auto& node_coordinates : coordinates)
- 	// {
- 	// 	std::cout << node_coordinates << std::endl;
- 	// }
-
+	return false;
 }
 
 //! Add a node to the domain
@@ -47,3 +43,19 @@ bool mfm::Domain<Tdim>::add_node(const std::shared_ptr<mfm::Node<Tdim> > &node,
 	return false;
 
 }
+
+template <unsigned Tdim>
+std::vector<typename mfm::Domain<Tdim>::VectorDim> mfm::Domain<Tdim>::nodal_coordinates() const
+{
+	std::vector<VectorDim> nodalCoords;
+	nodalCoords.reserve(this->nnodes());
+
+
+	for (const auto& node : nodes_)
+	{
+		nodalCoords.emplace_back(node->coordinates());
+	}
+
+	return nodalCoords;
+
+};
