@@ -1,0 +1,3 @@
+/home/stephensmith/Documents/mfm/build/CMakeFiles/rebuild_cache.dir
+/home/stephensmith/Documents/mfm/build/CMakeFiles/edit_cache.dir
+/home/stephensmith/Documents/mfm/build/CMakeFiles/mfm.dir
